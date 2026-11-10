@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reportar Nuevo Rescate</title>
+</head>
+<body>
+
+    <header>
+        <h1>Registro de Nuevo Animal Rescatado</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar Animal</a></li>
+            <li><a href="rescates.html">Ver Rescates</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Formulario de Ingreso y Control</h2>
+            
+            <!-- Formulario principal con los nuevos requerimientos -->
+            <form action="#" method="POST">
+                
+                <!-- SECCIÓN 1: DATOS BÁSICOS DEL DUEÑO / REPORTANTE -->
+                <fieldset>
+                    <legend><strong>1. Datos del Propietario o Persona que Reporta</strong></legend>
+                    <p>
+                        <label for="nombre_dueno">Nombre completo:</label><br>
+                        <input type="text" id="nombre_dueno" name="nombre_dueno" required placeholder="Ej. Ana Pérez">
+                    </p>
+                    <p>
+                        <label for="telefono_dueno">Teléfono de contacto:</label><br>
+                        <input type="tel" id="telefono_dueno" name="telefono_dueno" required placeholder="Ej. 0991234567">
+                    </p>
+                    <p>
+                        <label for="direccion_dueno">Dirección o sector:</label><br>
+                        <input type="text" id="direccion_dueno" name="direccion_dueno" placeholder="Ej. Ciudadela Los Tamarindos">
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- SECCIÓN 2: DATOS DE QUIEN RECIBE / ATIENDE -->
+                <fieldset>
+                    <legend><strong>2. Datos del Personal de Atención</strong></legend>
+                    <p>
+                        <label for="personal_atiende">Nombre de quien recibe / atiende:</label><br>
+                        <input type="text" id="personal_atiende" name="personal_atiende" required placeholder="Ej. Dr. Carlos Mendoza">
+                    </p>
+                    <p>
+                        <label for="cargo_personal">Cargo / Rol:</label><br>
+                        <input type="text" id="cargo_personal" name="cargo_personal" value="Veterinario / Paramédico Rescatista">
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- SECCIÓN 3: INFORMACIÓN DEL ANIMAL Y CASO -->
+                <fieldset>
+                    <legend><strong>3. Datos del Animal y Diagnóstico Inicial</strong></legend>
+                    
+                    <!-- Campo de texto para el título o nombre provisional -->
+                    <p>
+                        <label for="nombre">Título del caso / Nombre provisional:</label><br>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. PERRITO LUNA">
+                    </p>
+
+                    <!-- Lista desplegable con categorías y 6 opciones de razas/especies -->
+                    <p>
+                        <label for="categoria">Categoría y Tipo / Especie:</label><br>
+                        <select id="categoria" name="categoria">
+                            
+                            <!-- Grupo de Perros (6 razas) -->
+                            <optgroup label="Perros">
+                                <option value="perro_labrador">Labrador Retriever</option>
+                                <option value="perro_pastor">Pastor Alemán</option>
+                                <option value="perro_poodle">Poodle</option>
+                                <option value="perro_husky">Husky Siberiano</option>
+                                <option value="perro_pitbull">Pitbull</option>
+                                <option value="perro_mestizo">Mestizo / Criollo</option>
+                            </optgroup>
+
+                            <!-- Grupo de Gatos (6 razas/tipos) -->
+                            <optgroup label="Gatos">
+                                <option value="gato_siames">Siamés</option>
+                                <option value="gato_persa">Persa</option>
+                                <option value="gato_angora">Angora</option>
+                                <option value="gato_mainecoon">Maine Coon</option>
+                                <option value="gato_esfinge">Esfinge (Sphynx)</option>
+                                <option value="gato_comun">Común Europeo</option>
+                            </optgroup>
+
+                            <!-- Grupo de Fauna Silvestre (6 especies) -->
+                            <optgroup label="Fauna Silvestre">
+                                <option value="silvestre_zorro">Zorro de Sechura</option>
+                                <option value="silvestre_zarigueya">Zarigüeya (Ratonera)</option>
+                                <option value="silvestre_iguana">Iguana Verde</option>
+                                <option value="silvestre_mapache">Mapache</option>
+                                <option value="silvestre_buho">Búho / Lechuza</option>
+                                <option value="silvestre_loro">Loro o Perico</option>
+                            </optgroup>
+
+                        </select>
+                    </p>
+
+                    <!-- Niveles de urgencia médica con sus tratamientos iniciales asociados -->
+                    <p>
+                        <label><strong>Nivel de Urgencia y Tratamiento Inicial:</strong></label><br><br>
+                        
+                        <input type="radio" id="urgencia_alta" name="urgencia" value="Alta">
+                        <label for="urgencia_alta"><strong>Alta (Emergencia crítica)</strong><br>
+                        <em>Procedimiento:</em> Estabilización inmediata, vía intravenosa y control de hemorragias.<br>
+                        <em>Tratamiento inicial:</em> Analgesia fuerte, fluidoterapia de urgencia y oxígeno si requiere.</label><br><br>
+                        
+                        <input type="radio" id="urgencia_media" name="urgencia" value="Media">
+                        <label for="urgencia_media"><strong>Media (Atención moderada)</strong><br>
+                        <em>Procedimiento:</em> Evaluación clínica general y limpieza de heridas superficiales.<br>
+                        <em>Tratamiento inicial:</em> Antibiótico preventivo, desparasitación y curación tópica.</label><br><br>
+                        
+                        <input type="radio" id="urgencia_baja" name="urgencia" value="Baja">
+                        <label for="urgencia_baja"><strong>Baja (Estable)</strong><br>
+                        <em>Procedimiento:</em> Revisión visual y examen físico rutinario.<br>
+                        <em>Tratamiento inicial:</em> Baño medicado, vitaminas y observación temporal.</label><br><br>
+                        
+                        <input type="radio" id="urgencia_control" name="urgencia" value="Control Periodico">
+                        <label for="urgencia_control"><strong>Cita por control periódico</strong><br>
+                        <em>Procedimiento:</em> Pesaje, revisión de evolución médica previa y ajuste de dieta.<br>
+                        <em>Tratamiento inicial:</em> Continuar con suplementos o seguimiento pautado.</label><br><br>
+                        
+                        <input type="radio" id="urgencia_vacuna" name="urgencia" value="Vacunacion">
+                        <label for="urgencia_vacuna"><strong>Vacunación</strong><br>
+                        <em>Procedimiento:</em> Control de temperatura y desparasitación previa a la aplicación.<br>
+                        <em>Tratamiento inicial:</em> Administración de vacuna correspondiente según cartilla e historial.</label>
+                    </p>
+
+                    <!-- Área de texto (textarea) para la descripción detallada -->
+                    <p>
+                        <label for="descripcion">Descripción detallada del estado en que se encontró:</label><br>
+                        <textarea id="descripcion" name="descripcion" rows="4" cols="45" placeholder="Describa detalles físicos, heridas o condiciones..."></textarea>
+                    </p>
+
+                </fieldset>
+
+                <!-- Botón para enviar -->
+                <p>
+                    <button type="submit">Guardar Registro Completo</button>
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cuerpo de Rescate Animal</p>
+    </footer>
+
+</body>
+</html>
